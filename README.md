@@ -32,9 +32,9 @@ Main success scenario:
 New users should be able to sign up, and existing users should be able to log in with the correct method, then be taken to a page with a list of existing  PIA’s (if any) sorted by date and status. The user may withdraw, edit a PIA and resubmit it for review or create a brand-new one. Upon submitting  it, the Privacy Officer shall be notified that a new  PIA is awaiting review via email. The Privacy Officer logs in and clicking on the PIA will allow the Privacy Officer to review, edit, and provide comments upon which a notification is sent to the submitter via email. The Privacy Officer then either rejects or accepts it, if the latter then the PIA becomes a read-only and an email notification is sent to the submitter that their PIA had been accepted.
 
 Features:
-Log in via Facebook (Using Facebook API)
-Create new PIA
-Edit existing PIA
-Send email notifications to general users and Privacy Officer once something changes 
-Generate PDF of the PIA
+1)Log in via Facebook (Using Facebook API)
+2)Create new PIA
+3)Edit existing PIA
+4)Send email notifications to general users and Privacy Officer once something changes 
+5)Generate PDF of the PIA
 
