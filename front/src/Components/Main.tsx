@@ -1,39 +1,30 @@
-
-
-import '../CSS/App.css';
+// import "../CSS/App.css";
 // @ts-ignore
-import Login from '../Components/Login.tsx'
+import Login from "../Components/Login.tsx";
 import * as React from "react";
 
 interface State {
-    isLogged: boolean;
+  isLogged: boolean;
 }
 
-export default  class Main extends React.Component<any, any> {
+export default class Main extends React.Component<any, any> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      isLogged: false,
+    };
+  }
 
+  componentDidMount() {}
 
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            isLogged: false,
-        }
-    }
+  componentDidUpdate(
+    prevProps: Readonly<any>,
+    prevState: Readonly<any>,
+    snapshot?: any
+  ) {}
 
-    componentDidMount() {
-    }
-
-    componentDidUpdate(prevProps: Readonly<any>, prevState: Readonly<any>, snapshot?: any) {
-
-    }
-
-    render() {
-        console.log("test")
-       return (
-           <Login/>
-       )
-    }
-
-
-
+  render() {
+    console.log("test");
+    return <Login />;
+  }
 }
-

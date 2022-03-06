@@ -1,30 +1,20 @@
-
-import '../CSS/App.css';
-import {Button, Col, DatePicker, Row} from "antd";
-
-function Login() {
-  return (
-    <div style={{height: '100vh', width: '100vw'}}>
-     <Row style={{height: "30%", backgroundColor: "red"}} >
-        <Button>
-            test
-        </Button>
-     </Row>
-        <DatePicker/>
-        <Row style={{height: "40%"}}>
-            <Col span={6} style={{backgroundColor: "green"}}>
-                test11: Changed by Misha
-            </Col>
-            <Col span={12} style={{backgroundColor: "blue"}}>
-                test2
-            </Col>
-            <Col span={6} style={{backgroundColor: "yellow"}}>
-            test3
-            </Col>
-
-        </Row>
-    </div>
-  );
+import { Form, Input, Button, Image } from "antd";
+import { Component } from "react";
+import "../CSS/App.less";
+export class Login extends Component {
+  render() {
+    return (
+      <div className="container">
+        <Form>
+          <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+            <Button type="primary" htmlType="submit" id="loginBtn">
+              Login In With Azure
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
+    );
+  }
 }
 
 export default Login;
