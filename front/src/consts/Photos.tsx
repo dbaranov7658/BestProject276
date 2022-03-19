@@ -38,6 +38,7 @@ const fortisLogoForMain = [
     </svg>
 ];
 
+
 export {
     fortisLogo,
     fortisLogoForMain
