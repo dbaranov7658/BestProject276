@@ -18,6 +18,10 @@ interface State{
     isOfficer: boolean
 }
 
+export function convertToPDF(data: any){
+    "Logic"
+}
+
 class PTable extends React.Component<Props, State> {
     private pdfExportComponent: React.RefObject<PDFExport>;
     constructor(props: any){

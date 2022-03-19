@@ -1,6 +1,7 @@
 import {Button, Tag, Tooltip, Popconfirm} from "antd";
 import { DeleteOutlined } from '@ant-design/icons';
 import {PrinterOutlined} from '@ant-design/icons';
+import {convertToPDF} from "../Components/PTable";
 
 const dataSource = [
     {
@@ -188,7 +189,7 @@ const columnsForOfficer = [
 
             {status.status === 'APPROVED' ?
                 <Tooltip placement="bottom" title={"Print"} style={{flex: "1"}}>
-                    <Button type={"link"}  onClick={() => {alert("Download PIA Function")}}><PrinterOutlined /></Button>
+                    <Button type={"link"}  onClick={() => { convertToPDF("test")}}><PrinterOutlined /></Button>
                 </Tooltip>
                 :
                 <h1></h1>
