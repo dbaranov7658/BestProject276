@@ -268,7 +268,7 @@ exports.emailRejectPia = async (req, res) => {
         // get name of pia from db
         const pia_name = "PIA #1";
 
-        // get pia user from db
+
         const recipient_email = "userfortisbc@outlook.com";
         const recipient_name = "General User"
 

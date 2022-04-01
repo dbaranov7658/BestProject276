@@ -118,6 +118,11 @@ app.post('/addNew', verifyJWT, (req, res, ) => {
 
 })
 
+app.get('/editPia:id', verifyJWT, (req, res) => {
+
+
+})
+
 app.post('/deletePia', verifyJWT, (req, res, ) => {
     const token = req.headers["x-access-token"]
     const id = req.body.id

@@ -22,6 +22,7 @@ interface State{
 }
 
 
+
 class PTable extends React.Component<Props, State> {
         columns: any[]
         columnsForOfficer: any[]
@@ -37,8 +38,8 @@ class PTable extends React.Component<Props, State> {
                 title: 'Name',
                 dataIndex: 'name',
                 key: 'name',
-                render: name => {
-                    return <a>{ name }</a>
+                render: (name, key) => {
+                    return <Link to="editPia:">{ name }</Link>
                 },
                 sorter: (a, b) => {
                     if (a.name > b.name) {
@@ -117,7 +118,7 @@ class PTable extends React.Component<Props, State> {
                 title: 'Name',
                 dataIndex: 'name',
                 key: 'name',
-                render: name => {
+                render: (name, key) => {
                     return <a>{ name }</a>
                 },
                 sorter: (a, b) => {
