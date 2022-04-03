@@ -21,6 +21,7 @@ interface State{
     isSkeleton: boolean
     searchValue: string
     isSearch: boolean
+    pageSize: number
 }
 
 
@@ -34,7 +35,8 @@ class PTable extends React.Component<Props, State> {
                 tableData: [],
                 isSkeleton: true,
                 searchValue: "",
-                isSearch: false
+                isSearch: false,
+                pageSize: 10
             };
         this.emailNewPia = this.emailNewPia.bind(this);
         this.emailCommentPia = this.emailCommentPia.bind(this);
@@ -42,6 +44,7 @@ class PTable extends React.Component<Props, State> {
         this.emailApprovePia = this.emailApprovePia.bind(this);
         this.emailRejectPia = this.emailRejectPia.bind(this);
         this.emailDeletePia = this.emailDeletePia.bind(this);
+        this.onShowSizeChange = this.onShowSizeChange.bind(this);
         this.columns = [
             {
                 title: 'Name',
@@ -364,6 +367,16 @@ class PTable extends React.Component<Props, State> {
         }
     }
 
+    async onShowSizeChange(page, pageSize) {
+        console.log(page, pageSize);
+        if (pageSize.toString() === 'all') {
+            console.log('true');
+            this.setState({ pageSize: this.state.allPia.length });
+        } else{
+            this.setState({ pageSize: pageSize });
+        }
+    }
+
     render() {
         return (
             <div className='page-body'>
@@ -388,7 +401,8 @@ class PTable extends React.Component<Props, State> {
 
                     <Table
                         bordered
-                        pagination={{ defaultPageSize: 10, showSizeChanger: true, pageSizeOptions: ['10', '20', '30', '50', '100'] }}
+                        // pagination={{ defaultPageSize: 10, showSizeChanger: true, pageSizeOptions: ['10', '20', '30', '50', '100', `${this.state.tableData.length}`, 'all'], showQuickJumper: true, total: this.state.tableData.length, showTotal: total => `Total ${total} items` }}
+                        pagination={{pageSize: this.state.pageSize, showSizeChanger: true, pageSizeOptions: ['10', '20', '30', '50', '100', `${this.state.tableData.length}`, 'all'], onShowSizeChange: this.onShowSizeChange, showQuickJumper: true, total: this.state.tableData.length, showTotal: total => `Total ${total} items`}}
                         dataSource={this.state.tableData.filter(data => data.name.toLowerCase().includes(this.state.searchValue))}
                         columns={localStorage.getItem("isOfficer") === "true" ? this.columnsForOfficer : this.columns}
                     />
