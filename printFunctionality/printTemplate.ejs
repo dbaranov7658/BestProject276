@@ -40,15 +40,19 @@
     </div>
 
     <div id="text-content">
-        <p><strong>Project Name: </strong> <%= projectName %></p>
-        <p><strong>Sponsoring Business Unit: </strong> <%= sponsoringBusinessUnit %></p>
+        <p><strong>Project Name: </strong></p>
+        <p><%= projectName %></p>
+        
+        <p><strong>Sponsoring Business Unit: </strong></p>
+        <p><%= sponsoringBusinessUnit %></p>
+
         <p><strong>Project Description: </strong></p> 
             <%- projectDescription %>
 
         <p><strong>Is it necessary for the purpose of the project that
-            personal information be collected, used or disclosed?  </strong><br>
-            <% if (isCollected) {%> Yes <% } %> <% if (!isCollected) {%> No <% } %>
-        </p>
+            personal information be collected, used or disclosed?  </strong></p>
+            <p><% if (isCollected) {%> Yes <% } %> <% if (!isCollected) {%> No <% } %></p>
+        
 
         <% if(Boolean(isCollected)){ %><p><strong>If yes, what?</strong></p> <p><%- personalInfo %></p>
         <% } else{ %> <% } %>
@@ -56,10 +60,11 @@
         <p><strong>List the individuals accountable for the personal information: </strong></p> 
         <%- individualsInfo %>
 
-        <p><strong>Which "purpose" in S2.3 of the FortisBC Privacy Policy applies to this project?</strong> <br> <%= purpose %></p>
+        <p><strong>Which "purpose" in S2.3 of the FortisBC Privacy Policy applies to this project?</strong></p>
+        <p><%= purpose %></p>
 
-        <p><strong>Is any information being disclosed or stored outside of Canada as part of this project?</strong> <br> 
-        <% if (isDisclosed) {%> Yes <% } %> <% if (!isDisclosed) {%> No <% } %></p>
+        <p><strong>Is any information being disclosed or stored outside of Canada as part of this project?</strong></p>
+        <p><% if (isDisclosed) {%> Yes <% } %> <% if (!isDisclosed) {%> No <% } %></p>
 
             <% if(Boolean(isDisclosed)){ %>
                 <p><strong>If yes, what?</strong></p> 

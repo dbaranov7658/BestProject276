@@ -1,6 +1,9 @@
+html{
+    zoom: 0.55;
+}
 body{
-    width: 1587px;
-    height: 2245px;
+    /* width: 1587px;
+    height: 2245px; */
     margin: 0px;
     font-family: 'Lato', sans-serif;
 }
@@ -8,6 +11,9 @@ body{
 #imgheadercontainer{
     height:300px;
     width: 100%;
+    position: absolute;
+    left: 0;
+    top: -1em;
     margin: auto;
     background-color: rgb(23, 58, 100);
 }
@@ -20,7 +26,7 @@ body{
 }
 
 #PIA{
-    margin-top: 100px;
+    margin-top: 5em;
     text-align: center;
     font-size: 60px;
     margin-bottom: 20px;
@@ -37,13 +43,19 @@ body{
     margin-bottom: 20px;
 }
 
+p{
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
 #date-created-container{
     text-align: right;
     margin: 0px;
     margin-right: 150px;
     flex-direction: row;
     width: auto;
-    font-size: 30px;
+    font-size: 10px;
 }
 
 #date-created{
@@ -62,14 +74,10 @@ body{
     margin: auto;
     margin-bottom: 0;
     width: 85%;
-    font-size: 40px;
+    font-size: 30px;
 }
 
-p{
-    font-size: 40px;
-    margin-bottom: 30px;
-    text-align: left;
-}
+
 
 strong{
     font-weight: 700;
