@@ -276,7 +276,7 @@ exports.addNew = (req, res, ) => {
 exports.printPia = (req, res, ) => {
     const printedPia = req.body.Pia
     const token = req.headers["x-access-token"]
-    console.log(printedPia);
+    //console.log(printedPia);
 
     jwt.verify(token, process.env.JWT_VAR, async (err, decoded) => {
         if (decoded.id && printedPia){

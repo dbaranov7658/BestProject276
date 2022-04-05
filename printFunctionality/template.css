@@ -9,10 +9,11 @@ body{
 }
 
 #imgheadercontainer{
-    height:300px;
+    height:290px;
     width: 100%;
     margin: auto;
-    background-color: rgb(23, 58, 100); 
+    /* background-color: rgb(23, 58, 100);  */
+    background-color: rgb(27, 84, 128); 
 }
 
 #imgheader{
@@ -43,8 +44,8 @@ body{
 }
 
 p{
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 40px;
+    margin-bottom: 0px;
     text-align: left;
 }
 
@@ -54,7 +55,7 @@ p{
     margin-right: 150px;
     flex-direction: row;
     width: auto;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 #date-created{
@@ -72,11 +73,9 @@ p{
 #text-content{
     margin: auto;
     margin-bottom: 0;
-    width: 85%;
-    font-size: 30px;
+    width: 90%;
+    font-size: 40px;
 }
-
-
 
 strong{
     font-weight: 700;
